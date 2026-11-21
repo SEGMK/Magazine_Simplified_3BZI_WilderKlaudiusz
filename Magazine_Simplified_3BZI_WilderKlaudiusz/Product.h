@@ -33,7 +33,7 @@ public:
 		DiscountPercentage = discountPercentage;
 	}
 
-	GUID GetId() const { return Guid; };//copy
+	string GetId() const { return GuidToString(Guid); };//copy
 	string GetName() const { return Name; }; //copy
 	string GetDescription() const { return Description; }; //copy
 	string GetType() const { return Type; }; //copy
@@ -52,4 +52,16 @@ private:
 	double Quantity;
 	double DiscountPercentage;
 
+	static string GuidToString(GUID guid)
+	{
+		wchar_t buffer[39];
+
+		if (StringFromGUID2(guid, buffer, 39) == 0)
+			throw runtime_error("Failed to convert GUID to string.");
+
+		// Convert wchar_t string to string
+		wstring wideString(buffer);
+
+		return string(wideString.begin(), wideString.end());
+	}
 };

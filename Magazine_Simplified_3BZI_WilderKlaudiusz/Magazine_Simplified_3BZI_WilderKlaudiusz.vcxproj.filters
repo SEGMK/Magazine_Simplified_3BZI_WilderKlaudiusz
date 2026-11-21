@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="Interface">
       <UniqueIdentifier>{5d162939-e705-436c-a83a-bcfd2f24d6c1}</UniqueIdentifier>
     </Filter>
@@ -62,6 +58,9 @@
     <ClCompile Include="SearchEngine.cpp">
       <Filter>Application\SourceFiles</Filter>
     </ClCompile>
+    <ClCompile Include="FileDataLoader.cpp">
+      <Filter>Infrastructure\SourceFiles</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConsoleInterface.h">
@@ -81,6 +80,9 @@
     </ClInclude>
     <ClInclude Include="ProductSerializer.h">
       <Filter>Domain\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="FileDataHandler.h">
+      <Filter>Infrastructure\HeaderFiles</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

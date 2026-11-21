@@ -140,12 +140,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleInterface.cpp" />
+    <ClCompile Include="FileDataLoader.cpp" />
     <ClCompile Include="Helper.cpp" />
     <ClCompile Include="Magazine_Simplified_3BZI_WilderKlaudiusz.cpp" />
     <ClCompile Include="SearchEngine.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConsoleInterface.h" />
+    <ClInclude Include="FileDataHandler.h" />
     <ClInclude Include="Helper.h" />
     <ClInclude Include="Product.h" />
     <ClInclude Include="ProductSerializer.h" />

@@ -8,6 +8,7 @@
 class SearchEngine // : ISearchEngine
 {
 public:
+	//should be SearchEngineResponse DTO
 	tuple<vector<Product>, bool> GetProducts(SearchEngineRequest searchRequest);
 	bool PostProduct(Product product);
 	bool DeleteProduct(GUID id);

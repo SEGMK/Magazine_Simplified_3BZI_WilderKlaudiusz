@@ -8,6 +8,7 @@ using json = nlohmann::json;
 inline void to_json(json& j, const Product& product)
 {
     j = json{
+        {"id", product.GetId()},
         {"name", product.GetName()},
         {"description", product.GetDescription()},
         {"type", product.GetType()},
