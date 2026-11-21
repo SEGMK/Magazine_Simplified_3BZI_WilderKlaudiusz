@@ -1,13 +1,25 @@
 #pragma once
+#include "Product.h"
+#include "SearchEngineRequest.h"
+
+#include <Windows.h>
+#include <tuple>
 
 class SearchEngine // : ISearchEngine
 {
 public:
-	void GetSearchResults(const std::string& query);
-	void GetAllSeachOptions();
-	void GetCurrentSearchOption();
-	void SetSearchOption(int option);
-	void ClearSearchOptions();
+	tuple<vector<Product>, bool> GetProducts(SearchEngineRequest searchRequest);
+	bool PostProduct(Product product);
+	bool DeleteProduct(GUID id);
+	bool UpdateProduct(GUID id, Product product) 
+	{
+		bool success = true;
+
+		success &= DeleteProduct(id);
+		success &= PostProduct(product);
+
+		return success;
+	}
 
 private:
 	bool ChooseOption();

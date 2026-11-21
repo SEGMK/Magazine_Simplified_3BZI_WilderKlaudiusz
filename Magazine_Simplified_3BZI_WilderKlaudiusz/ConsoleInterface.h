@@ -1,17 +1,30 @@
 #pragma once
 
 #include "SearchEngineRequest.h"
+#include "SearchEngine.h"
+#include "Product.h"
 
 #include <iostream>
 #include <limits>
 #include <string>
+#include <vector>
+#include <optional> //nullable type
 
 class ConsoleInterface // : IAppInterface
 {
 public:
+
+	
+	ConsoleInterface()
+	{
+		//should be injected by DependencyInjectionService
+		_searchEngine = SearchEngine();
+	}
 	void Run();
 
 private:
+	/*readonly*/ SearchEngine _searchEngine;
+
 	void ChooseOption();
 	void RemoveElement();
 	void AddElement();
@@ -33,7 +46,7 @@ private:
 				return value;
 			}
 
-			std::cout << "Invalid input. Please enter a valid value.\n";
+			std::cout << "Invalid input. Please enter a valid value." << std::endl;
 		}
 	}
 
@@ -41,10 +54,11 @@ private:
 
 	void DisplayElements();
 	SearchEngineRequest CreateSearchRequest();
-	void FetchSearchEngineResults(SearchEngineRequest request);
+	vector<Product> GetSearchEngineResults(SearchEngineRequest request);
+	void DisplayElement(vector<Product> products, int currentIndex);
 
 	template <typename T, typename Parser>
-	T EnterSearchParameter(Parser parsingMethod, std::string consoleLines[])
+	std::optional<T> EnterSearchParameter(Parser parsingMethod, const std::vector<std::string>& consoleLines)
 	{
 		//foreach; & - ref; const - no mod
 		for (const std::string& line : consoleLines)
@@ -64,9 +78,12 @@ private:
 			}
 			else
 			{
+				std::cout << "Invalid input. Please enter a valid value." << std::endl;
 				return RetryInputValidation<T>(parsingMethod);
 			}
 		}
+
+		return std::nullopt;
 	}
 
 #pragma endregion
