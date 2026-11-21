@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Interface">
+      <UniqueIdentifier>{5d162939-e705-436c-a83a-bcfd2f24d6c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain">
+      <UniqueIdentifier>{f5399596-54da-443c-81ec-6720abea384c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure">
+      <UniqueIdentifier>{23bca59a-7038-4754-aaae-89cfff2bbe8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application">
+      <UniqueIdentifier>{7cdcaa90-6d5b-4e8e-add1-a441b01770b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface\HeaderFiles">
+      <UniqueIdentifier>{b2114b9a-736f-46ab-955e-411942cb3a48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface\SourceFiles">
+      <UniqueIdentifier>{34fd9019-6ea8-432b-97af-1e7f7333bbb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\HeaderFiles">
+      <UniqueIdentifier>{b80c3c11-59fe-4756-80cb-87c8ddc21fc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\SourceFiles">
+      <UniqueIdentifier>{88359ad1-4f58-417f-8815-9ef92d651fba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\HeaderFiles">
+      <UniqueIdentifier>{f7ca4ff3-88b7-46b1-8c04-176bfde49477}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\SourceFiles">
+      <UniqueIdentifier>{e315c855-4482-4304-b1bc-e0901fe960e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\HeaderFiles">
+      <UniqueIdentifier>{54dd87a4-fb09-4761-8397-2f9fb416b64f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\SourceFiles">
+      <UniqueIdentifier>{b0ba92e4-3975-4c0e-8abc-88c430f42cab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{b96fbf26-b735-49c7-a233-97288935cf95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers\HeaderFiles">
+      <UniqueIdentifier>{2ca8c520-e557-4f5a-a70e-351d2c415a02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers\SourceFiles">
+      <UniqueIdentifier>{e9e43ad1-060e-4c85-b902-1555559b78e0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ConsoleInterface.cpp">
+      <Filter>Interface\SourceFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Helper.cpp">
+      <Filter>Helpers\SourceFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Magazine_Simplified_3BZI_WilderKlaudiusz.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ConsoleInterface.h">
+      <Filter>Interface\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Helper.h">
+      <Filter>Helpers\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="SearchEngine.h">
+      <Filter>Application\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="SearchEngineRequest.h">
+      <Filter>Application\HeaderFiles</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
